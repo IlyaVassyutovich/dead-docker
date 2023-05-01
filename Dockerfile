@@ -18,4 +18,9 @@ RUN git clone "https://github.com/IlyaVassyutovich/myrcs.git"
 RUN ln --symbolic ./myrcs/dotfiles ./.dotfiles
 RUN rcup -f
 
+RUN apt install -y vim
+
+RUN apt purge -y software-properties-common rcm git
+RUN apt autoremove -y
+
 ENTRYPOINT [ "/usr/bin/fish" ]
