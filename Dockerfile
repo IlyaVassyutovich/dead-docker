@@ -32,7 +32,9 @@ RUN rcup -f
 
 RUN apt install -y vim less groff
 
-RUN apt install -y curl wget dnsutils iputils-tracepath iputils-ping
+RUN apt install -y curl wget dnsutils iputils-tracepath iputils-ping iproute2
+
+RUN apt install -y rsync
 
 RUN apt purge -y software-properties-common rcm git
 RUN apt autoremove -y
