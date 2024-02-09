@@ -42,6 +42,7 @@ RUN pip3 install --upgrade pip \
 
 RUN apt purge -y software-properties-common rcm
 RUN apt autoremove -y
+RUN rm -rf /var/lib/apt/lists/*
 
 COPY --from=awc_cli_installer /usr/local/aws-cli/ /usr/local/aws-cli/
 COPY --from=awc_cli_installer /aws-cli-bin/ /usr/local/bin/
