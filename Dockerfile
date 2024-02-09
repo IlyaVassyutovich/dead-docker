@@ -36,7 +36,11 @@ RUN apt install -y curl wget dnsutils iputils-tracepath iputils-ping iproute2
 
 RUN apt install -y rsync
 
-RUN apt purge -y software-properties-common rcm git
+RUN apt install -y python3 python3-pip
+RUN pip3 install --upgrade pip \
+  && pip3 install git-filter-repo
+
+RUN apt purge -y software-properties-common rcm
 RUN apt autoremove -y
 
 COPY --from=awc_cli_installer /usr/local/aws-cli/ /usr/local/aws-cli/
