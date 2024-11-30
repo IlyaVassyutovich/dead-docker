@@ -1,4 +1,4 @@
-FROM public.ecr.aws/amazonlinux/amazonlinux:2 as awc_cli_installer
+FROM public.ecr.aws/amazonlinux/amazonlinux:2 AS awc_cli_installer
 RUN yum update -y \
   && yum install -y unzip wget \
   && wget https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip \
@@ -35,6 +35,10 @@ RUN apt install -y vim less groff
 RUN apt install -y curl wget dnsutils iputils-tracepath iputils-ping iproute2
 
 RUN apt install -y rsync
+
+RUN apt install -y unzip
+
+RUN apt install -y dotnet-sdk-8.0
 
 RUN apt install -y python3 python3-pip
 RUN pip3 install --upgrade pip \
