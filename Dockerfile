@@ -30,7 +30,7 @@ RUN git clone "https://github.com/IlyaVassyutovich/myrcs.git"
 RUN ln --symbolic ./myrcs/dotfiles ./.dotfiles
 RUN rcup -f
 
-RUN apt install -y vim less groff
+RUN apt install -y neovim less groff
 
 RUN apt install -y curl wget dnsutils iputils-tracepath iputils-ping iproute2
 
