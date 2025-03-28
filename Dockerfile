@@ -41,6 +41,8 @@ RUN apt install -y socat
 
 RUN apt install -y unzip
 
+RUN add-apt-repository ppa:dotnet/backports \
+  && apt update
 RUN apt install -y dotnet-sdk-8.0
 
 RUN apt purge -y software-properties-common rcm
