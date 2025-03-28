@@ -36,6 +36,8 @@ RUN apt install -y curl wget dnsutils iputils-tracepath iputils-ping iproute2
 
 RUN apt install -y rsync
 
+RUN apt install -y socat
+
 RUN apt install -y unzip
 
 RUN apt install -y dotnet-sdk-8.0
