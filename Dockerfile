@@ -43,10 +43,6 @@ RUN apt install -y unzip
 
 RUN apt install -y dotnet-sdk-8.0
 
-RUN apt install -y python3 python3-pip
-RUN pip3 install --upgrade pip \
-  && pip3 install git-filter-repo
-
 RUN apt purge -y software-properties-common rcm
 RUN apt autoremove -y
 RUN rm -rf /var/lib/apt/lists/*
