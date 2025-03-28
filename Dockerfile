@@ -10,7 +10,7 @@ RUN yum update -y \
   # may be present in /usr/local/bin of the installer stage.
   && ./aws/install --bin-dir /aws-cli-bin/
 
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 RUN apt update \
     && apt upgrade -y
