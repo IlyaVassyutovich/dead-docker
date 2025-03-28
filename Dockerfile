@@ -19,7 +19,8 @@ RUN apt install -y software-properties-common
 
 RUN apt install -y rcm
 
-RUN add-apt-repository ppa:fish-shell/release-3
+RUN add-apt-repository ppa:fish-shell/release-3 \
+  && apt update
 RUN apt install -y fish
 RUN usermod --shell /usr/bin/fish root
 
